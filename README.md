@@ -2,6 +2,13 @@
 
 Note: These instructions are tested with Google Cloud Platform. 
 
+Create secrets to allow you to pull the images:
+
+```
+kubectl create secret docker-registry regsecret --docker-server=container-registry.oracle.com --docker-username=YOUR_USERNAME --docker-password=YOUR_PASSWORD --docker-email=YOUR_EMAIL
+kubectl create secret docker-registry quaysecret --docker-server=quay.io --docker-username=YOUR_USERNAME --docker-password=YOUR_PASSWORD --docker-email=YOUR_EMAIL
+```
+
 Create the database deployment:
 
 ```
